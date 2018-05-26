@@ -1,0 +1,28 @@
+
+from:
+http://codingbat.com/
+
+String-2 > count_hi 
+
+
+Return the number of times that the string "hi"
+appears anywhere in the given string.
+
+
+for examples:
+
+count_hi('abc hi ho') → 1
+count_hi('ABChi hi') → 2
+count_hi('hihi') → 2
+
+
+---solution---
+
+def count_hi(str):
+    counter = 0
+    for i in range (len(str)-1):
+        if str[i:i+2] == "hi":
+            counter += 1
+    return counter
+    
+    
