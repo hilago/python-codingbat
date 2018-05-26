@@ -1,0 +1,27 @@
+
+from:
+http://codingbat.com/
+
+String-1 > hello_name 
+
+
+Given a string name, e.g. "Bob",
+return a greeting of the form "Hello Bob!".
+
+
+
+for examples:
+
+hello_name('Bob') → 'Hello Bob!'
+hello_name('Alice') → 'Hello Alice!'
+hello_name('X') → 'Hello X!'
+
+
+
+---solution---
+
+
+def hello_name(name):
+  return f'Hallo {name}'
+
+	
