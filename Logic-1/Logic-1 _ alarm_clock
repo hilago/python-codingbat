@@ -1,0 +1,62 @@
+
+from:
+http://codingbat.com/
+
+Logic-1 > alarm_clock 
+
+Given a day of the week encoded as
+0=Sun, 1=Mon, 2=Tue, ...6=Sat,
+and a boolean indicating if we are on vacation,
+return a string of the form "7:00"
+indicating when the alarm clock should ring.
+Weekdays, the alarm should be "7:00" and on the weekend it should be "10:00".
+Unless we are on vacation --
+then on weekdays it should be "10:00" and weekends it should be "off".
+
+
+
+for examples:
+
+alarm_clock(1, False) → '7:00'
+alarm_clock(5, False) → '7:00'
+alarm_clock(0, False) → '10:00'
+
+
+
+---solution---
+
+def alarm_clock(day, vacation):
+
+    #sun = 0
+    #mon = 1
+    #tue = 2
+    #wed = 3
+    #thu = 4
+    #fri = 5
+    #sst = 6
+
+
+    if (day != 0 and day != 6) and not vacation:
+        return "7:00"
+    if (day != 0 and day != 6) and vacation:
+        return "10:00"
+    if  (day == 0 or day == 6) and vacation:
+        return "off"
+    if (day == 0 or day == 6) and not vacation:
+        return "10:00"
+	
+		
+		or
+		
+	
+def alarm_clock(day, vacation):
+   if vacation:
+     if day == 0 or day == 6:
+       return "off"
+     else:
+       return "10:00"
+   if not vacation:
+      if day == 0 or day == 6:
+        return "10:00"
+      else:
+        return "7:00"

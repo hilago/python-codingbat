@@ -1,0 +1,21 @@
+from:
+http://codingbat.com/
+
+Logic-1 > near_ten 
+
+Given a non-negative number "num",
+return True if num is within 2 of a multiple of 10.
+
+
+for examples:
+
+near_ten(12) → True
+near_ten(17) → False
+near_ten(19) → True
+
+
+---solution---
+
+def near_ten(num):
+  return   num % 10 <= 2 or num % 10 >= 8
+
