@@ -1,0 +1,25 @@
+
+from:
+http://codingbat.com/
+
+Warmup-2 > string_splosion 
+
+
+Given a non-empty string like "Code" return a string like "CCoCodCode".
+
+
+for examples:
+
+string_splosion('Code') → 'CCoCodCode'
+string_splosion('abc') → 'aababc'
+string_splosion('ab') → 'aab'
+
+
+
+---solution---
+
+def string_splosion(str):
+  new_word = ""
+  for i in range(len(str)):
+    new_word = new_word + str[ :i+1]
+  return new_word
