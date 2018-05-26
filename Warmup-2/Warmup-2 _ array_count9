@@ -1,0 +1,41 @@
+
+from:
+http://codingbat.com/
+
+Warmup-2 > array_count9
+
+
+Given an array of ints,
+return the number of 9's in the array.
+
+
+for examples:
+
+array_count9([1, 2, 9]) → 1
+array_count9([1, 9, 9]) → 2
+array_count9([1, 9, 9, 3, 9]) → 3
+
+
+
+---solution---
+
+
+def array_count9(nums):
+    #initializing a counter
+    count_9 = 0
+    for n in range(len(nums)):
+        if nums[n]==9:
+            count_9+=1
+    return count_9  
+	
+	
+	or
+	
+	
+def array_count9(nums):
+  count_9 = 0
+  for num in nums:
+    if num == 9:
+      count_9 +=1
+
+  return count_9

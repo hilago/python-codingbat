@@ -1,0 +1,37 @@
+
+from:
+http://codingbat.com/
+
+Warmup-2 > string_match 
+
+
+Given 2 strings, a and b,
+return the number of the positions where they contain the same length 2 substring.
+So "xxcaazz" and "xxbaaz" yields 3,
+since the "xx", "aa", and "az" substrings appear in the same place in both strings.
+
+
+for examples:
+
+string_match('xxcaazz', 'xxbaaz') → 3
+string_match('abc', 'abc') → 2
+string_match('abc', 'axc') → 0
+
+
+
+---solution---
+
+
+def string_match(a, b):
+    len_a = len(a)
+    len_b = len(b)
+    count = 0
+
+   # shorter_str =
+    s_str = min(len_a,len_b)
+
+    for n in range(s_str-1):
+        if a[n:n+2]==b[n:n+2]:
+            count+=1
+    return count
+	

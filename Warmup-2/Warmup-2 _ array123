@@ -1,0 +1,32 @@
+
+from:
+http://codingbat.com/
+
+Warmup-2 > array123
+
+
+Given an array of ints,
+return True if the sequence of numbers
+1, 2, 3 appears in the array somewhere.
+
+
+for examples:
+
+array123([1, 1, 2, 3, 1]) → True
+array123([1, 1, 2, 4, 1]) → False
+array123([1, 1, 2, 1, 2, 3]) → True
+
+---solution---
+
+def array123(nums):
+    #range=
+   r=len(nums)-2
+   for n in range(r):
+       if nums[n]==1 and nums[n+1]==2 and nums[n+2]==3:
+           return True
+   return False
+
+
+  
+
+
